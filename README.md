@@ -2,7 +2,7 @@
 This repository contains the code for the student full stack application.
 
 ## Status
-![Build & Deploy Frontend](https://github.com/Bansikah/studentappsb/actions/workflows/frontend.yml/badge.svg) ![Build & Deploy Backend](https://github.com/Bansikah/studentappsb/actions/workflows/backend.yaml/badge.svg) ![Releases](https://github.com/Bansikah/studentappsb/actions/workflows/release.yml/badge.svg)
+![Build & Deploy Frontend](https://github.com/Bansikah/studentappsb/actions/workflows/frontend.yml/badge.svg) ![Build & Deploy Backend](https://github.com/Bansikah/studentappsb/actions/workflows/backend.yml/badge.svg) ![Releases](https://github.com/Bansikah/studentappsb/actions/workflows/release.yml/badge.svg)
 
 ## Prerequisites
 
