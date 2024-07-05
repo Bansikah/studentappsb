@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 16
       - name: Install Dependencies
-        run: npm ci
+        run: npm install --force
 
       - name: Build Project
         run: npm run build-for-gh
