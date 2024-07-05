@@ -14,8 +14,6 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
-
-    //@CrossOrigin(origins = "*", allowedHeaders = "/*")
     @PostMapping("/add")
     public String add(@RequestBody Student student){
         studentService.saveStudent(student);
@@ -23,7 +21,6 @@ public class StudentController {
     }
 
 
-    //@CrossOrigin(origins = "*", allowedHeaders = "/*")
     @GetMapping("/getAll")
     public List<Student> list(){
         return studentService.getAllStudents();

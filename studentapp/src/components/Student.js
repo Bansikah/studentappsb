@@ -56,7 +56,14 @@ export default function Student() {
       }
     };
 
-    fetchStudents();
+    // Set up interval to fetch students every 5 seconds
+    const interval = setInterval(() => {
+        fetchStudents();
+      }, 5000);
+
+    // Clean up interval on component unmount
+    return () => clearInterval(interval);
+    //fetchStudents();
   }, []);
 
   return (
