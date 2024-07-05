@@ -22,7 +22,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
 
   studentappfrontend:
-    image: bansikah/studentappfrontend:v1.0
+    image: bansikah/studentappfrontend:v1.1
     networks:
       - ping-net
     labels:
@@ -32,7 +32,7 @@ services:
     restart: unless-stopped
 
   studentappbackend:
-    image: bansikah/studentapp:v1.0
+    image: bansikah/studentapp:v1.1
     environment:
       - APP_VERSION=0.0.1-SNAPSHOT
     networks:

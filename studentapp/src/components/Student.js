@@ -24,7 +24,7 @@ export default function Student() {
     console.log(student);
 
     try {
-      const response = await fetch('http://localhost:8081/student', {
+      const response = await fetch('http://localhost:8081/student/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(student),
