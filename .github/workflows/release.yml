@@ -2,16 +2,25 @@ name: Build & Deploy release
 
 on:
   push:
-    branches:
-      - master
-
+    tags:
+      - 'v*'
+permissions:
+  packages: write
+  contents: write
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: studentappbackend
+    permissions:
+      packages: write
+      contents: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run Hello World script
-        run: echo "Hello World"
+      - uses: actions/checkout@v3
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@v5
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          title: Releases
