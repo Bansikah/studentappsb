@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk AS build-stage
+FROM eclipse-temurin:17-alpine AS build-stage
 
 WORKDIR /app
 
@@ -6,7 +6,7 @@ COPY . .
 
 RUN ./mvnw clean package
 
-FROM eclipse-temurin:21-jre-alpine
+FROM eclipse-temurin:17-alpine
 
 COPY target/Studentappbackend-0.0.1-SNAPSHOT.jar .
 COPY ./run.sh  .
