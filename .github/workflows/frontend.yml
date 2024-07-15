@@ -7,7 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  # Replace with your GHRC authentication details (obtained from personal access tokens)
+  
   GHRC_USERNAME: ${{ secrets.GHRC_USERNAME }}
   GHRC_TOKEN: ${{ secrets.GHRC_TOKEN }}
 
